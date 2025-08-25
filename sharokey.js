@@ -672,4 +672,6 @@
         global.Sharokey = Sharokey;
     }
 
+    window.sharokey = sharokey;
+
 })(typeof window !== 'undefined' ? window : global);
