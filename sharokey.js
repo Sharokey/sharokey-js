@@ -674,4 +674,3 @@
 
 })(typeof window !== 'undefined' ? window : global);
 
-window.sharokey = sharokey;
