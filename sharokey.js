@@ -21,7 +21,7 @@
     // Configuration globale
     let config = {
         token: null,
-        apiUrl: 'https://passlink.domaindev/api/v1',
+        apiUrl: 'https://api.sharokey.com/api/v1',
         timeout: 30000,
         defaultHours: 24,
         defaultViews: 1
