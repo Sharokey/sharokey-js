@@ -1,0 +1,74 @@
+{
+  "name": "sharokey-js",
+  "version": "1.0.0",
+  "description": "JavaScript library for secure secret sharing with Zero Knowledge encryption",
+  "main": "dist/sharokey.js",
+  "module": "dist/sharokey.esm.js",
+  "types": "dist/sharokey.d.ts",
+  "browser": "dist/sharokey.js",
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "sharokey",
+    "secrets",
+    "encryption",
+    "zero-knowledge",
+    "security",
+    "password-sharing",
+    "aes-gcm",
+    "api-client"
+  ],
+  "author": "Sharokey Team",
+  "license": "MIT",
+  "homepage": "https://www.sharokey.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharokey/sharokey-js"
+  },
+  "bugs": {
+    "url": "https://github.com/sharokey/sharokey-js/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "node build.js --format=cjs",
+    "build:esm": "node build.js --format=esm",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "docs": "jsdoc -c jsdoc.json",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "jsdoc": "^4.0.0"
+  },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/sharokey.esm.js",
+      "require": "./dist/sharokey.js",
+      "types": "./dist/sharokey.d.ts",
+      "browser": "./dist/sharokey.js"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ]
+}
